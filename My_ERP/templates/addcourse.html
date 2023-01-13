@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Enter Course </h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        Course Name<input type="text" name="cname" class="form-control"><br>
+        Course Duration<input type="text" name="duration" class="form-control"><br>
+        Course Detail    <textarea name="details" rows="5" cols="21" class="form-control"></textarea><br>
+        Course Fees<input type="number" name="fees" class="form-control"><br>
+        <button class="btn btn-primary">Add Course</button>
+    </form>
+{% endblock %}

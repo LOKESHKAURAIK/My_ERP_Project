@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+{% block content %}
+    <h1>All Course Detail</h1>
+    <table class="table table-bordered text-center table-hover bg-primary">
+        <thead>
+            <tr>
+                <th>Course Name</th>
+                <th>Duration</th>
+                <th>Course Detail</th>
+                <th>Fees</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in cr %}
+            <tr>
+                <td>{{i.cname}}</td>
+                <td>{{i.duration}}</td>
+                <td>{{i.detail}}</td>
+                <td>{{i.fees}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+{% endblock %}
