@@ -16,12 +16,12 @@
         Email<input type="email" name="email" class="form-control"><br>
         Mobile<input type="number" name="mob" class="form-control"><br>
         Branch<input type="text" name="branch" class="form-control"><br>
-        Course<select class="form-control">
+        Course<select class="form-control" name="course">
             {% for i in cr %}
             <option value="{{i.id}}">{{i.cname}}</option>
             {% endfor %}
         </select>
-        Status<select class="form-control">
+        Status<select class="form-control" name="status">
             
             <option>Enquery</option>
             <option>Joined</option>

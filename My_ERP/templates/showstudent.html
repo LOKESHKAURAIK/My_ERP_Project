@@ -1,0 +1,40 @@
+
+{% extends "base.html" %}
+{% block content %}
+    <h1>All Student Detail</h1>
+    <table class="table table-bordered text-center table-hover bg-primary">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Branch</th>
+                <th>Courses</th>
+                <th>Status</th>
+                <th>Enquiry Date</th>
+                <th>Address</th>
+                <th>Qualification</th>
+                <th>Semester</th>
+                <th>Passout</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in stu %}
+            <tr>
+                <td>{{i.sname}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.mob}}</td>
+                <td>{{i.branch}}</td>
+                <td>{{i.course}}</td>
+                <td>{{i.status}}</td>
+                <td>{{i.date}}</td>
+                <td>{{i.address}}</td>
+                <td>{{i.qualification}}</td>
+                <td>{{i.sem}}</td>
+                <td>{{i.passout}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+{% endblock %}
